@@ -35,7 +35,8 @@ if prompt := st.chat_input("What is up?"):
 
     # Generate a response using the Flowise API.
     response_data = query({"question": prompt})
-    response_content = response_data.get("answer", "Sorry, I couldn't generate a response.")
+    print(response_data)
+    response_content = response_data.get("text", "Sorry, I couldn't generate a response.")
 
     # Display the assistant's response.
     with st.chat_message("assistant"):
